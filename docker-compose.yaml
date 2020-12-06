@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  cockroach:
+    image: cockroachdb/cockroach:v20.2.2
+    container_name: cockroach-25P02
+    command: start-single-node --insecure --store=store --logtostderr --vmodule=exec_log=2
+    ports:
+      - 62527:26257
